@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <h1>Let’s Make a Deal</h1>
+      </div>
+      <div class="grid">
+        <div class="stat">
+          <table>
+            <tr>
+              <td colspan="2">Поменял дверь</td>
+              <td colspan="2">Не поменял дверь</td>
+            </tr>
+            <tr>
+              <td>Выиграл</td>
+              <td>Проиграл</td>
+              <td>Выиграл</td>
+              <td>Проиграл</td>
+            </tr>
+            <tr>
+              <td id="change-win">0</td>
+              <td id="change-lose">0</td>
+              <td id="stay-win">0</td>
+              <td id="stay-lose">0</td>
+            </tr>
+          </table>
+        </div>
+        <div class="main">
+          <div id="doors" class="block">
+            <div id="0" class="door closed"></div>
+            <div id="1" class="door closed"></div>
+            <div id="2" class="door closed"></div>
+          </div>
+          <div id="buttons" class="hidden">
+            <div class="button" id="change">Поменять</div>
+            <div class="button" id="stay">Оставить</div>
+          </div>
+        </div>
+        <div id="chat">
+          <div id="info">Чат игры:</div>
+          <div id="msgs"></div>
+        </div>
+      </div>
+    </div>
+    <div id="modal">
+      <div class="modal-wrap modal-hide">
+        <div class="modal-content">
+          <button class="button" id="btn-again">play again?</button>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/stats.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/utilities.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

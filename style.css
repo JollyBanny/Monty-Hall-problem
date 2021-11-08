@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./assets/fonts/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  /* padding: auto; */
+  /* margin: 0; */
+  font-family: "Proxima Nova";
+  user-select: none;
+}
+.wrap {
+  min-width: 1400px;
+}
+
+.container {
+  display: flex;
+  height: calc(100% - 100px);
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  height: calc(100% - 100px);
+  grid-template:
+    "stat main chat"
+    / 400px auto 400px;
+  gap: 10px;
+}
+
+.stat {
+  grid-area: stat;
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.stat table {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.stat table td {
+  padding: 5px 8px;
+  border: 2px dashed rgb(205, 162, 255);
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#doors {
+  display: flex;
+  margin: 30px 0;
+}
+
+.door {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 160px;
+  height: 260px;
+  margin: 0 20px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.opened {
+  outline: 5px solid rgb(255, 137, 82); /* Пунктирная рамка */
+}
+
+.closed {
+  background-color: rgb(255, 137, 82);
+}
+
+.door:active {
+  background-color: rgb(255, 120, 58);
+}
+
+#buttons {
+  margin: 30px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  pointer-events: none;
+}
+
+.button {
+  display: inline-flex;
+  margin: 30px;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(205, 162, 255);
+  color: white;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: rgb(200, 152, 255);
+}
+
+.button:active {
+  background-color: rgb(194, 142, 255);
+  transform: translateY(1px);
+}
+
+#chat {
+  grid-area: chat;
+  display: flex;
+  flex-direction: column;
+}
+
+#info {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin: 0 0 20px 0;
+  padding: 0 10px;
+  border-radius: 10px;
+  background-color: rgb(143, 143, 143);
+  font-size: 24 px;
+}
+
+.msg {
+  display: flex;
+  height: 100px;
+  width: 300px;
+  margin: 20px 0;
+  padding: 0 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+  align-items: center;
+}
+
+.msg-host {
+  background-color: rgb(205, 162, 255);
+}
+
+.msg-player {
+  background-color: rgb(162, 187, 255);
+}
+
+.modal-wrap {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.178);
+}
+
+.modal-content {
+  display: flex;
+  width: 500px;
+  height: 300px;
+  border-radius: 25px 25px 25px 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content button {
+  height: 150px;
+  width: 300px;
+  border: none;
+  background-color: rgb(200, 152, 255);
+  font-size: 32px;
+}
+
+.modal-hide {
+  display: none;
+}
